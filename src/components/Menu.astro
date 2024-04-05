@@ -1,0 +1,309 @@
+---
+import { social } from "../data/social";
+---
+
+<div class="btn-menu">
+  <div class="line line--1"></div>
+  <div class="line line--2"></div>
+  <div class="line line--3"></div>
+</div>
+
+<nav class="menu">
+  <a href="#" class="menu-a menu-a--1 a-transparent">-</a>
+  <a href="/acerca" class="menu-a menu-a--2"><span>#</span> Sobre Mi</a>
+  <a href="/experiencia" class="menu-a menu-a--3"><span>#</span> Experiencia</a>
+  <a href="/contacto" class="menu-a menu-a--4"><span>#</span> Contacto</a>
+  <a href="#" class="menu-a menu-a--5 a-transparent">-</a>
+  <a href="#" class="menu-a menu-a--6 a-transparent">-</a>
+  <!-- <a href="#" class="menu-a menu-a--7 a-transparent">-</a> -->
+</nav>
+
+<div class="social-container">
+  <a class="social-item" href=`${social.linkedin.link}` target="_blank"
+    >Linkedin</a
+  >
+  <a class="social-item" href=`${social.github.link}` target="_blank">Github</a>
+</div>
+
+<div class="capa"></div>
+
+<!-- btn-menu -->
+<style>
+  .btn-menu {
+    position: fixed;
+    left: 1rem;
+    padding: 0.8rem;
+    bottom: 25rem;
+    cursor: pointer;
+    z-index: 1500;
+  }
+
+  .line {
+    height: 1px;
+    width: 50px;
+    margin: 0.5rem 0;
+    background-color: var(--gray-color-light);
+    transition: transform 0.1s ease;
+  }
+
+  .line--1--active {
+    transform: rotate(45deg) translate(8px, 5px);
+  }
+  .line--2--active {
+    transform: scale(0);
+  }
+  .line--3--active {
+    transform: rotate(-45deg) translate(8px, -5px);
+  }
+
+  @media (height < 550px) {
+    .btn-menu {
+      bottom: 15rem;
+    }
+  }
+
+  @media (width < 450px) {
+    .btn-menu {
+      left: 1rem;
+    }
+    .line {
+      height: 1px;
+      width: 20px;
+
+      margin: 0.5rem 0;
+      background-color: var(--gray-color-light);
+      transition: transform 0.1s ease;
+    }
+  }
+</style>
+
+<!-- menu -->
+<style>
+  .menu {
+    position: fixed;
+    z-index: 1000;
+    display: grid;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    visibility: hidden;
+    transition: visibility 1s ease;
+  }
+
+  .menu--active {
+    visibility: visible;
+  }
+
+  .menu-a {
+    /* font-family: "Poppins", sans-serif; */
+    background-color: var(--white-color);
+    text-decoration: none;
+    padding: 2rem;
+    padding-left: 10rem;
+    color: var(--gray-color);
+    font-size: 2rem;
+    /* letter-spacing: 2px; */
+    font-weight: 200;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    /* border: 1px solid var(--white-color); */
+    /* outline: 2px solid var(--white-color); */
+  }
+  .menu-a:hover {
+    background-color: var(--first-color);
+    color: var(--white-color);
+    /* border: 1px solid var(--black-color); */
+    /* outline: 2px solid var(--black-color); */
+  }
+
+  .menu-a span {
+    font-size: 1.2rem;
+    top: -1rem;
+    left: 0.2rem;
+    font-weight: 600;
+    color: var(--green-t);
+  }
+
+  .a-transparent {
+    color: transparent;
+    pointer-events: none;
+  }
+
+  .menu-a--1 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+  }
+  .menu-a--2 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.1s;
+  }
+
+  .menu-a--3 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.2s;
+  }
+
+  .menu-a--4 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.3s;
+  }
+
+  .menu-a--5 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.4s;
+  }
+
+  .menu-a--6 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.5s;
+  }
+
+  .menu-a--7 {
+    transform: translateX(-100%);
+    transition: transform 0.6s ease 0.6s;
+  }
+
+  .menu-a--1--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0s;
+  }
+  .menu-a--2--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.1s;
+  }
+  .menu-a--3--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.2s;
+  }
+  .menu-a--4--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.3s;
+  }
+  .menu-a--5--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.4s;
+  }
+  .menu-a--6--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.5s;
+  }
+  .menu-a--7--active {
+    transform: translateX(0%);
+    transition: transform 0.6s ease 0.6s;
+  }
+
+  @media (width < 1140px) {
+    .menu {
+      width: 100%;
+    }
+  }
+  @media (width < 480px) {
+    .menu-a {
+      padding: 1rem;
+      padding-left: 6rem;
+
+      font-size: 2rem;
+    }
+  }
+  @media (width < 340px) {
+    .menu-a {
+      padding-left: 4rem;
+
+      font-size: 1.5rem;
+    }
+  }
+</style>
+
+<!-- capa -->
+<style>
+  .capa {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #0000001c;
+    z-index: 900;
+    visibility: hidden;
+    backdrop-filter: blur(4px);
+    /* cursor: pointer; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .capa--active {
+    visibility: visible;
+    opacity: 1;
+  }
+</style>
+
+<!-- social -->
+<style>
+  .social-container {
+    position: fixed;
+    bottom: 6rem;
+    left: -2rem;
+    transform: rotate(270deg);
+    z-index: 900;
+  }
+
+  .social-item {
+    color: var(--white-color);
+    text-decoration: none;
+    padding: 0rem 0.5rem;
+  }
+
+  .social-item:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<script>
+  const lineOne = document.querySelector(".line--1");
+  const lineTwo = document.querySelector(".line--2");
+  const lineThree = document.querySelector(".line--3");
+
+  const btnMenu = document.querySelector(".btn-menu");
+  const menu = document.querySelector(".menu");
+  const capa = document.querySelector(".capa");
+
+  const menuAOne = document.querySelector(".menu-a--1");
+  const menuATwo = document.querySelector(".menu-a--2");
+  const menuAThree = document.querySelector(".menu-a--3");
+  const menuAFour = document.querySelector(".menu-a--4");
+  const menuAFive = document.querySelector(".menu-a--5");
+  const menuASix = document.querySelector(".menu-a--6");
+  const menuASeven = document.querySelector(".menu-a--7");
+
+  btnMenu.addEventListener("click", () => {
+    lineOne.classList.toggle("line--1--active");
+    lineTwo.classList.toggle("line--2--active");
+    lineThree.classList.toggle("line--3--active");
+
+    menu.classList.toggle("menu--active");
+    capa.classList.toggle("capa--active");
+
+    menuAOne.classList.toggle("menu-a--1--active");
+    menuATwo.classList.toggle("menu-a--2--active");
+    menuAThree.classList.toggle("menu-a--3--active");
+    menuAFour.classList.toggle("menu-a--4--active");
+    menuAFive.classList.toggle("menu-a--5--active");
+    menuASix.classList.toggle("menu-a--6--active");
+    menuASeven.classList.toggle("menu-a--7--active");
+  });
+
+  capa.addEventListener("click", () => {
+    lineOne.classList.toggle("line--1--active");
+    lineTwo.classList.toggle("line--2--active");
+    lineThree.classList.toggle("line--3--active");
+
+    menu.classList.toggle("menu--active");
+    capa.classList.toggle("capa--active");
+
+    menuAOne.classList.toggle("menu-a--1--active");
+    menuATwo.classList.toggle("menu-a--2--active");
+    menuAThree.classList.toggle("menu-a--3--active");
+    menuAFour.classList.toggle("menu-a--4--active");
+    menuAFive.classList.toggle("menu-a--5--active");
+    menuASix.classList.toggle("menu-a--6--active");
+    menuASeven.classList.toggle("menu-a--7--active");
+  });
+</script>

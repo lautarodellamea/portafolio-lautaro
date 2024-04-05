@@ -1,0 +1,30 @@
+---
+import "@fontsource/poppins";
+import "@fontsource-variable/inter";
+
+import "../styles/variables.css";
+import "../styles/global.css";
+
+import Head from "../layouts/Head.astro";
+import Nav from "../components/Nav.astro";
+import Menu from "../components/Menu.astro";
+import Social from "../components/Social.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <Head title={title} description={description} />
+  <body>
+    <Nav />
+    <Menu />
+    <slot />
+    <!-- <Social/> -->
+  </body>
+</html>

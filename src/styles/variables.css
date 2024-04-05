@@ -1,0 +1,22 @@
+:root {
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --gray-color: #434448;
+  --gray-color-light: #9b9b9b;
+  --bg-color: #070707;
+  --green-t: #b7f200;
+  --first-color: rgb(7, 7, 7);
+  --max-width: 1350px;
+}
+
+@media (width < 1400px) {
+  :root {
+    --max-width: 1140px;
+  }
+}
+
+@media (width < 1200px) {
+  :root {
+    --max-width: 960px;
+  }
+}

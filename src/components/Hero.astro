@@ -1,0 +1,142 @@
+<section class="hero-container">
+  <div class="hero">
+    <p class="hero-p1">Hola, soy Lautaro Della Mea</p>
+    <h1>
+      <span class="desarrollador">Desarrollador</span> Web con años de experiencia
+      <span class="h1-punto">.</span>
+    </h1>
+    <div class="cv-container">
+      <p class="hero-p2">Fullstack Developer</p>
+      <a class="cv" href="cv-Lautaro-Della-Mea.pdf" target="_blank">CV</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    /* align-items: end; */
+  }
+
+  .hero h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+    font-weight: 500;
+
+    margin: auto;
+  }
+
+  .h1-punto {
+    color: var(--green-t);
+    left: -1.5rem;
+  }
+
+  .hero p {
+    /* text-transform: uppercase; */
+    font-weight: 300;
+    font-size: 1.3rem;
+    color: var(--gray-light-color);
+    color: #9b9b9b;
+    /* opacity: 0.6; */
+    margin-left: 0.5rem;
+  }
+
+  .hero-p1 {
+  }
+  .hero-p2 {
+    margin-top: 0.5rem;
+  }
+
+  .cv-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cv {
+    border: 1px solid #9b9b9b;
+    padding: 0.3rem 0.5rem;
+    left: 0.5rem;
+    text-decoration: none;
+    color: #9b9b9b;
+    width: max-content;
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    box-shadow: 0 0 0 0 black;
+    transition: all 0.3s ease-in-out;
+  }
+  .cv:hover {
+    border: 1px solid var(--white-color);
+    background-color: var(--white-color);
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 5px 5px 0 0 black;
+    color: var(--bg-color);
+  }
+
+  @media (width < 1024px) {
+    .hero h1 {
+      font-size: 4rem;
+      line-height: 4rem;
+    }
+    .h1-punto {
+      left: -1rem;
+    }
+
+    .cv {
+      left: 0;
+    }
+
+    .hero p {
+      margin-left: 0rem;
+    }
+  }
+  @media (width < 560px) {
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+    .h1-punto {
+      left: -0.8rem;
+    }
+  }
+  @media (width < 576px) {
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+  }
+  @media (width < 460px) {
+    .hero h1 {
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  @media (width <= 410px) {
+    .hero h1 {
+      font-size: 2.3rem;
+
+      line-height: 2.3rem;
+    }
+    .h1-punto {
+      left: -0.6rem;
+    }
+  }
+  @media (width <= 358px) {
+    .hero h1 {
+      font-size: 2rem;
+
+      line-height: 2rem;
+    }
+  }
+  @media (width <= 318px) {
+    .hero h1 {
+      font-size: 1.8rem;
+
+      line-height: 1.8rem;
+    }
+  }
+</style>

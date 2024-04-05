@@ -1,0 +1,97 @@
+---
+import { projects } from "../../data/projects";
+---
+
+<section class="project-container">
+  <p class="p">
+    Estos son algunos de los proyectos que he desarrollado en colaboración con
+    clientes, con el objetivo de proporcionar soluciones a medida y satisfacer
+    sus necesidades específicas. A través de estas colaboraciones, he
+    fortalecido mi capacidad para comunicarme eficazmente, trabajar en equipo y
+    entregar resultados de calidad.
+  </p>
+
+  <div class="project">
+    {
+      projects.map((el) => (
+        <div>
+          <div class="project-item">
+            <h2>{el.title}</h2>
+            <p>{el.description}</p>
+          </div>
+          <div class="project-links">
+            <a href={`${el.preview}`} target="_blank">
+              Preview
+            </a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .projects-container {
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+  }
+
+  .p {
+    color: var(--gray-color-light);
+    max-width: var(--max-width);
+    margin-bottom: 2rem;
+  }
+
+  .project-container {
+    margin-top: 2rem;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: var(--max-width);
+    gap: 1.5rem;
+  }
+
+  .project-item {
+    min-width: 200px;
+    max-width: 280px;
+  }
+
+  .project-item h2 {
+    font-weight: 200;
+    font-size: 1.3rem;
+    border-bottom: 1px solid var(--gray-color);
+    padding-bottom: 0.5rem;
+  }
+  .project-item p {
+    padding-top: 0.5rem;
+    color: var(--gray-color-light);
+  }
+
+  .project-links {
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .project-links a {
+    margin-top: 0.3rem;
+    color: #4e4e4e;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 1px 0.5rem;
+
+    box-shadow: 0 0 0 0 black;
+    transition: all 0.3s ease-in-out;
+  }
+  .project-links a:hover {
+    color: var(--bg-color);
+    background-color: var(--white-color);
+    /* text-decoration: underline; */
+    transform: translateY(-4px) translateX(-2px);
+    box-shadow: 5px 5px 0 0 black;
+  }
+</style>
