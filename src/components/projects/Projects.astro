@@ -20,9 +20,16 @@ import { projects } from "../../data/projects";
             <p>{el.description}</p>
           </div>
           <div class="project-links">
-            <a href={`${el.preview}`} target="_blank">
-              Preview
-            </a>
+            {el.preview && (
+              <a href={`${el.preview}`} target="_blank">
+                Deploy
+              </a>
+            )}
+            {el.code && (
+              <a href={`${el.code}`} target="_blank">
+                Repo
+              </a>
+            )}
           </div>
         </div>
       ))
