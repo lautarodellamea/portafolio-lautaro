@@ -24,7 +24,7 @@ export const projects = [
   {
     title: "Hello Tabs - Extención para navegadores",
     description:
-      "Hello Tabs es una extensión para tu navegador que te ayuda a organizar y optimizar tus sesiones de navegación. Consulta el archivo README del repositorio para obtener instrucciones detalladas sobre cómo instalar y utilizar esta extensión",
+      "Hello Tabs es una extensión para tu navegador que te ayuda a organizar y optimizar tus sesiones de navegación. Consulta el archivo README del repositorio para obtener instrucciones detalladas sobre su uso e instalación.",
     code: "https://github.com/lautarodellamea/tabs-extension-google-chrome",
     preview: "",
   },
