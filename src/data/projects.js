@@ -22,7 +22,7 @@ export const projects = [
     preview: "https://master-servicios-tecnologicos.netlify.app/",
   },
   {
-    title: "Hello Tabs - Extención para navegadores",
+    title: "Hello Tabs - Extensión para navegadores",
     description:
       "Hello Tabs es una extensión para tu navegador que te ayuda a organizar y optimizar tus sesiones de navegación. Consulta el archivo README del repositorio para obtener instrucciones detalladas sobre su uso e instalación.",
     code: "https://github.com/lautarodellamea/tabs-extension-google-chrome",
