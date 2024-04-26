@@ -11,10 +11,11 @@
     <path d="M73 111L37 111L37 101L73 101L73 111Z" fill="white" />
 
     <style>
-    svg { fill: #000; }
+    svg, svg path { fill: #000; }
 
     @media (prefers-color-scheme: dark) {
-        svg { fill: #FFF; }
+        svg, svg path { fill: #FFF; }
+
     }
     </style>
 </svg>
